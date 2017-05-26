@@ -1,10 +1,13 @@
-<h1>You've added a new contact!</h1>
-
-<p>@Model.GetName()</p>
-<p>@Model.GetPhone()</p>
-<p>@Model.GetAddress()</p>
-<p>@Model.GetEmail()</p>
-
-<a href='/contacts/new'>Add Another Contact</a>
-<a href='/contacts'>View All Contacts</a>
-<a href='/'>Return Home</a>
+<div class="container">
+  <h1>You've added a new contact!</h1>
+  @foreach (var contact in Model)
+  {
+    <h4>@contact.GetName()</h4>
+    <p>@contact.GetPhone()</p>
+    <p>@contact.GetAddress()</p>
+    <p>@contact.GetEmail()</p>
+  };
+  <a href='/contact/new'>Add Another Contact</a>
+  <a href='/contacts'>View All Contacts</a>
+  <a href='/'>Return Home</a>
+</div>

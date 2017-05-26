@@ -1,13 +1,17 @@
-<ul>
-  @foreach (var contact in Model)
-  {
-    <li>@contact.GetName()</li>
-    <li>@contact.GetPhone()</li>
-    <li>@contact.GetAddress()</li>
-    <li>@contact.GetEmail()</li>
-  }
-</ul>
+<div class="container">
+  <ul>
+    @foreach (var contact in Model)
+    {
+      <li>@contact.GetName()</li>
+        <ul>
+          <li>@contact.GetPhone()</li>
+          <li>@contact.GetAddress()</li>
+          <li>@contact.GetEmail()</li>
+        </ul>
+    }
+  </ul>
 
-<a href='/contacts/new'>Add a new contact</a>
-<a href='/clear_contacts'>Clear All Contacts</a>
-<a href='/'>Return Home</a>
+  <a href='/contact/new'>Add a new contact</a>
+  <a href='/clear_contacts'>Clear All Contacts</a>
+  <a href='/'>Return Home</a>
+</div>
