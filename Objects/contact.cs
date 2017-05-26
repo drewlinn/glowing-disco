@@ -10,7 +10,7 @@ namespace AddressBook.Objects
     private string _phone;
     private string _address;
     private string _email;
-    private static List<Contacts> _contacts = new List<Contacts> {};
+    private static List<Contact> _contacts = new List<Contact> {};
 
     public Contact(string name, string phone, string address, string email)
     {
@@ -56,7 +56,7 @@ namespace AddressBook.Objects
     {
       _contacts.Add(this);
     }
-    public static List<Contacts> GetAll()
+    public static List<Contact> GetAll()
     {
       return _contacts;
     }
