@@ -1,0 +1,13 @@
+<ul>
+  @foreach (var contact in Model)
+  {
+    <li>@contact.GetContact()</li>
+    <li>@contact.GetPhone()</li>
+    <li>@contact.GetAddress()</li>
+    <li>@contact.GetEmail()</li>    
+  }
+</ul>
+
+<button><a href="/contact_form.cshtml">Add a new contact</a></button>
+<button><a href="/clear_contacts.cshtml">Clear All Contacts</a></button>
+<button><a href="/index.cshtml">Return Home</a></button>
