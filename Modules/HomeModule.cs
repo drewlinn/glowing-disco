@@ -1,18 +1,27 @@
 using System;
 using System.Collections.Generic;
 
-class Contact
+namespace AddressBook
 {
-  private string _name;
-  private string _phone;
-  private string _address;
-  private string _email;
-}
-
-class AddressBook
-{
-  public static void Main()
+  public class HomeModule : NancyModule
   {
-    
+    public HomeModule()
+    {
+      Get["/"] = _ => {
+        return View["index.cshtml"];
+      };
+      Get["/contacts"] = _ => {
+        List<Contact> allContacts = Contact.GetAll();
+        return View["contacts.cshtml", allContacts];
+      };
+      Get["/contacts/new"] = _ => {
+        return View["contact_form.cshtml"];
+      };
+      Post["/contacts"] = _ => {
+        Contact newContact = new Contact(Request.Form["new-contact"]);
+        List<Contact> allContacts = Contact.GetAll();
+        return View["contacts.cshtml", allContacts];
+      };
+    }
   }
 }
