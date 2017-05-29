@@ -53,10 +53,10 @@ namespace AddressBook.Objects
     {
       _email = newEmail;
     }
-    // public void Save()
-    // {
-    //   _contacts.Add(this);
-    // }
+    public void Save()
+    {
+      _contacts.Add(this);
+    }
     public static List<Contact> GetAll()
     {
       return _contacts;
