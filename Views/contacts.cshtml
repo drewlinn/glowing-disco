@@ -1,4 +1,11 @@
 <div class="container">
+  <h1>Address Book</h1>
+  <h3>This Web Application is designed to help you keep track of your contacts!</h3>
+  <h4>What would you like to do?</h4>
+</div>
+
+
+<div class="container">
   <ul>
     @foreach (var contact in Model)
     {
@@ -12,6 +19,5 @@
   </ul>
 
   <a href='/contact/new'>Add a new contact</a>
-  <a href='/clear_contacts'>Clear All Contacts</a>
-  <a href='/'>Return Home</a>
+  <a href='/contacts/clear'>Clear All Contacts</a>
 </div>
