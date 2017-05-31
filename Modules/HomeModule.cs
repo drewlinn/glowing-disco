@@ -22,7 +22,7 @@ namespace AddressBook
       Get["/contacts/clear"] = _ => {
         return View["/clear_contacts.cshtml"];
       };
-      Post["/contacts/empty"] = _ => {
+      Post["/contacts/clear"] = _ => {
         Contact.ClearAll();
         return View["/contacts_cleared.cshtml"];
       };
